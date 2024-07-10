@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction Results</title>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="static/style.css"> <!-- Link to external CSS file for styling -->
+</head>
+<body>
+    <div class="background-image"></div> <!-- Div for background image -->
+    <div class="content">
+        <h1>Prediction Results</h1>
+        <p><strong>Predicted Iris Species:</strong> {{ prediction }}</p>
+
+        <div class="row">
+            <div class="col-md-6">
+                <div id="pie_chart">
+                    {{ pie_chart|safe }}
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div id="scatter_plot">
+                    {{ scatter_plot|safe }}
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

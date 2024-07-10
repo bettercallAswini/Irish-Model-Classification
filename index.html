@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iris Classification Model</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<!-- ======= Iris Classification Prediction Section ======= -->
+<section class="iris-prediction">
+    <div class="container">
+        <div class="title-box-d">
+            <h3 class="title-d">Iris Classification Prediction</h3>
+        </div>
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+                <div class="box-collapse-wrap form">
+                    <form class="form-a" id="irisPredictForm" action="/iris_predict" method="POST">
+                        <div class="form-group">
+                            <label for="sepal_length">Sepal Length</label>
+                            <input type="number" class="form-control form-control-lg" id="sepal_length" name="sepal_length" placeholder="Enter Sepal Length" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="sepal_width">Sepal Width</label>
+                            <input type="number" class="form-control form-control-lg" id="sepal_width" name="sepal_width" placeholder="Enter Sepal Width" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="petal_length">Petal Length</label>
+                            <input type="number" class="form-control form-control-lg" id="petal_length" name="petal_length" placeholder="Enter Petal Length" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="petal_width">Petal Width</label>
+                            <input type="number" class="form-control form-control-lg" id="petal_width" name="petal_width" placeholder="Enter Petal Width" required>
+                        </div>
+                        <button type="submit" class="btn btn-b">Predict Iris Classification</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End Iris Classification Prediction Section -->
+
+</body>
+</html>
